@@ -79,7 +79,8 @@ prepare() {
   patch -p1 -i "${srcdir}"/qt-creator-4.3.0-qbs-CONFIG-add-qbs_enable_project_file_updates.patch
 
   patch -p1 -i "${srcdir}"/qt-creator-4.6.2-fix-clang-detect.patch
-  patch -p1 -i "${srcdir}"/qt-creator-4.10.1-clang-9.patch
+  # Causes failures
+  # patch -p1 -i "${srcdir}"/qt-creator-4.10.1-clang-9.patch
 
   # Use system installed qbs
   rm -rf src/shared/qbs
